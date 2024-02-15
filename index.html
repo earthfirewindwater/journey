@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+</head>
+<body>
+    <h1>Thank you for completing the survey!</h1>
+    <p>Your ID is: <span id="generatedID"></span></p>
+
+    <script>
+        // Use Google Apps Script to fetch the generated ID
+        google.script.run.withSuccessHandler(displayID).getGeneratedID();
+
+        function displayID(generatedID) {
+            document.getElementById('generatedID').innerText = generatedID;
+        }
+    </script>
+</body>
+</html>
+
+
